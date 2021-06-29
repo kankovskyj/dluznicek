@@ -61,20 +61,25 @@
             margin-top: 2.5rem;
             font-size: 1.2rem;
         }
-        
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #0f0f0f;
-            }
 
-            h1, h2, p {
-                color: #e2e2e0;
-            }
-
-            .main-right {
-                filter: brightness(30%)            }
-
+        .main-right > .main-img {
+            display: block;
+            width: 700px;
+            height: 500px;
+            background-image: url(imgs/light.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
         }
+
+        amp-youtube {
+            width: 60%;
+            margin-top: 15vh;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5vh;
+            border-radius: 28px;
+        }
+
         .gradient {
             z-index: -1;
             display: block;
@@ -88,14 +93,22 @@
             background-size: 80%;
             background-repeat: no-repeat;
         }
-        amp-youtube {
-            width: 60%;
-            margin-top: 15vh;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 5vh;
-            border-radius: 28px;
+        
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #0f0f0f;
+            }
+
+            .main-right > .main-img {
+            background-image: url(imgs/dark.svg);
         }
+
+            h1, h2, p {
+                color: #e2e2e0;
+            }
+        }
+        
+        
       </style>
       <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
   </head>
@@ -121,7 +134,7 @@
             <button class="btn" on="tap:hello.hide">Jak to funguje?</button>
         </div>
         <div class="main-right">
-            <amp-img src="imgs/main.svg" width="650" height="500"></amp-img>
+            <div class="main-img"></div>
         </div>
     </main>
    
