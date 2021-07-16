@@ -7,7 +7,7 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
         body {
-          background-color: FAF7FF;
+          background-color: #FAF7FF;
           font-family: BlinkMacSystemFont, -apple-system, sans-serif;
         }
         .btn {
@@ -19,10 +19,7 @@
             font-size: 1.2rem;
             cursor: pointer;
         }
-        .btn.btn-download {
-            background-color: transparent;
-            color: #905AE0;
-        }
+
         header {
             margin-top: 5vh;
             width: 90%;
@@ -36,11 +33,11 @@
             display: flex;
             align-items: center;
         }
-        h1 {
-            margin-left: 1rem;
-            font-size: 1.2rem;
-            color: #fff;
+
+        .header-left > amp-img {
+            margin-right: 0.5rem;
         }
+        
 
         main {
             width: 90%;
@@ -71,7 +68,25 @@
             background-size: contain;
         }
 
+        .tutorial {
+            position: relative;
+        }
+        .gradient-two {
+            position: absolute;
+            z-index: -1;
+            display: block;
+            width: 800px;
+            height: 800px;
+            position: absolute;
+            left: 37rem;
+            top: -3rem;
+            background-image: url(imgs/gradient.svg);
+            background-position: center;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
         amp-youtube {
+            z-index: 1;
             width: 60%;
             margin-top: 15vh;
             margin-left: auto;
@@ -79,6 +94,39 @@
             margin-bottom: 5vh;
             border-radius: 28px;
         }
+
+        .footer {
+            width: 90%;
+            margin-top: 20vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .download {
+            display: block;
+            width: 160px;
+            height: 55px;
+            background-image: url(imgs/blk.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin-top: 3rem;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        .download.dw-two {
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 12rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
 
         .gradient {
             z-index: -1;
@@ -93,6 +141,43 @@
             background-size: 80%;
             background-repeat: no-repeat;
         }
+
+
+        
+
+
+        .footer-info {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-info > div {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .footer-info > div > a {
+            margin-left: 1rem;
+            align-items: center;
+            display: flex;
+            padding: 6px 15px;
+            border-radius: 50px;
+            background: #905AE0;
+            color: #fff;
+            opacity: 0.5;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        .footer-info > div > a:hover {
+            opacity: 1;
+        }
+        .footer-info > div > a > svg {
+                margin-right: 0.5rem;
+        }
+        .email, .book {
+                fill: #FAF7FF;
+                background: #e2e2e0;
+            }
+
+        
         
         @media (prefers-color-scheme: dark) {
             body {
@@ -101,11 +186,17 @@
 
             .main-right > .main-img {
             background-image: url(imgs/dark.svg);
-        }
+            }
 
-            h1, h2, p {
+            h1, h2, h3, p {
                 color: #e2e2e0;
             }
+
+            .download {
+                background-image: url(imgs/w.svg);
+            }
+
+
         }
         
         
@@ -121,9 +212,8 @@
             <h1>Dlužníček</h1>
         </span>
 
-        <button class="btn btn-download" on="tap:hello.hide">
-            Stáhnout Aplikaci
-        </button>
+        <button class="btn" on="tap:hello.hide">Jak to funguje?</button>
+
 
     </header>
 
@@ -131,19 +221,37 @@
         <div class="main-left">
             <h2>Pořádek dělá přátele.</h2>
             <p>Eviduj s kamarády všechny platby. Zdarma.</p>
-            <button class="btn" on="tap:hello.hide">Jak to funguje?</button>
+            <div class="download dw-one"></div>
         </div>
         <div class="main-right">
             <div class="main-img"></div>
         </div>
     </main>
    
-    <amp-youtube
-    data-videoid="u7V45OGbQOE"
-    layout="responsive"
-    width="350"
-    height="200" autoplay>
-    </amp-youtube>
+    <div class="tutorial">
+        <amp-youtube
+        data-videoid="u7V45OGbQOE"
+        layout="responsive"
+        width="350"
+        height="200" autoplay>
+        </amp-youtube>
+        <div class="gradient-two"></div>
+    </div>
+    
+
+
+    <div class="footer">
+        <h3>Vždy vyrovnané účty díky Dlužníčku.</h3>
+        <div class="download dw-two"></div>
+
+        <div class="footer-info">
+            <amp-img src="imgs/logo.svg" width="80" height="40"></amp-img>
+            <div>
+                <a><svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path class="email" d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg>ahoj@dluznicek.app</a>
+                <a><svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path class="book" d="M17.5 14.33C18.29 14.33 19.13 14.41 20 14.57V16.07C19.38 15.91 18.54 15.83 17.5 15.83C15.6 15.83 14.11 16.16 13 16.82V15.13C14.17 14.6 15.67 14.33 17.5 14.33M13 12.46C14.29 11.93 15.79 11.67 17.5 11.67C18.29 11.67 19.13 11.74 20 11.9V13.4C19.38 13.24 18.54 13.16 17.5 13.16C15.6 13.16 14.11 13.5 13 14.15M17.5 10.5C15.6 10.5 14.11 10.82 13 11.5V9.84C14.23 9.28 15.73 9 17.5 9C18.29 9 19.13 9.08 20 9.23V10.78C19.26 10.59 18.41 10.5 17.5 10.5M21 18.5V7C19.96 6.67 18.79 6.5 17.5 6.5C15.45 6.5 13.62 7 12 8V19.5C13.62 18.5 15.45 18 17.5 18C18.69 18 19.86 18.16 21 18.5M17.5 4.5C19.85 4.5 21.69 5 23 6V20.56C23 20.68 22.95 20.8 22.84 20.91C22.73 21 22.61 21.08 22.5 21.08C22.39 21.08 22.31 21.06 22.25 21.03C20.97 20.34 19.38 20 17.5 20C15.45 20 13.62 20.5 12 21.5C10.66 20.5 8.83 20 6.5 20C4.84 20 3.25 20.36 1.75 21.07C1.72 21.08 1.68 21.08 1.63 21.1C1.59 21.11 1.55 21.12 1.5 21.12C1.39 21.12 1.27 21.08 1.16 21C1.05 20.89 1 20.78 1 20.65V6C2.34 5 4.18 4.5 6.5 4.5C8.83 4.5 10.66 5 12 6C13.34 5 15.17 4.5 17.5 4.5Z" /></svg>Zpracování osobních údajů</a>
+            </div>
+        </div>
+    </div>
    
   </body>
 </html>
