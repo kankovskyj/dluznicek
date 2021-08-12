@@ -1,0 +1,207 @@
+.download-app {
+  display: block;
+  width: 160px;
+  height: 55px;
+  background-image: url(imgs/w.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-top: 3rem;
+  margin-left: 0;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #FAF7FF;
+}
+
+body {
+  background-color: #0f0f0f;
+  font-family: BlinkMacSystemFont, -apple-system, sans-serif;
+}
+
+header {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  width: 80px;
+}
+
+header span {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+  color: #905AE0;
+}
+
+header a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  margin-left: auto;
+  background-color: transparent;
+  color: #905AE0;
+  border: 2px solid #905AE0;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+main {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .main-left h1 {
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+main .main-left p {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+main .main-right {
+  margin-left: auto;
+  background-image: url(imgs/dark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: block;
+  width: 700px;
+  height: 500px;
+}
+
+iframe {
+  display: block;
+  margin-top: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 28px;
+}
+
+footer {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10rem;
+}
+
+footer h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+footer .download-app {
+  margin-left: auto !important;
+  margin-right: auto;
+  margin-bottom: 10rem;
+}
+
+@media (max-width: 575.98px) {
+  header .logo {
+    width: 70px;
+  }
+  header a {
+    display: none;
+  }
+  main .main-left h1 {
+    font-size: 1.75rem;
+    white-space: normal;
+  }
+  main .main-left p {
+    line-height: 1.75rem;
+  }
+  iframe {
+    margin-top: 7.5rem;
+  }
+  footer {
+    width: 90%;
+    margin-top: 7.5rem;
+    line-height: 2.5rem;
+  }
+  footer h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  header {
+    width: 90%;
+  }
+  main {
+    width: 90%;
+  }
+  main .main-left h1 {
+    font-size: 1.75rem;
+  }
+  main .main-left .download-app {
+    margin-top: 7rem;
+  }
+  iframe {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  header {
+    width: 90%;
+  }
+  main {
+    width: 90%;
+  }
+  main .main-right {
+    display: none;
+  }
+  iframe {
+    width: 680px;
+    height: 382,50px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  * {
+    color: #0f0f0f;
+  }
+  .download-app {
+    background-image: url(imgs/blk.svg);
+  }
+  body {
+    background-color: #FAF7FF;
+  }
+  main .main-right {
+    background-image: url(imgs/light.svg);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
