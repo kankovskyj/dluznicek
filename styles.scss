@@ -1,4 +1,4 @@
-$purple: #905AE0;
+$purple: #8D68E3;
 $white: #FAF7FF;
 $black: #0f0f0f;
 
@@ -38,9 +38,10 @@ body {
 }
 header {
     @include block;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    height: 4rem;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    height: 5vh;
+    border: 2px solid green;
     display: flex;
     align-items: center;
     .logo {
@@ -67,8 +68,10 @@ header {
 
 main {
     @include block;
-    margin-top: 4rem;
+    margin-top: 5vh;
     display: flex;
+    height: 70vh;
+    border: 2px solid red;
     .main-left {
         h1 {
             font-size: 3rem;
@@ -84,9 +87,9 @@ main {
         background-image: url(imgs/dark.svg);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: 110%;
         display: block;
-        width: 700px;
+        width: 700px; //Nefungujen a large monitoru
         height: 500px;
     }
     
@@ -201,8 +204,18 @@ footer {
 
 
 @media (prefers-color-scheme: light) {
+    
     * {
         color: $black;
+    }
+    header { 
+        span {
+            color: #5935B4;
+        }
+        a {
+            color: #5935B4;
+            border-color: #5935B4;
+        }
     }
     .download-app {
         background-image: url(imgs/blk.svg);

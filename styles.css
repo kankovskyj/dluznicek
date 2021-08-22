@@ -31,9 +31,10 @@ header {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  height: 4rem;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  height: 5vh;
+  border: 2px solid green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,7 +51,7 @@ header span {
   font-size: 2rem;
   font-weight: bold;
   margin-left: 0.5rem;
-  color: #905AE0;
+  color: #8D68E3;
 }
 
 header a {
@@ -58,8 +59,8 @@ header a {
   font-size: 1.25rem;
   margin-left: auto;
   background-color: transparent;
-  color: #905AE0;
-  border: 2px solid #905AE0;
+  color: #8D68E3;
+  border: 2px solid #8D68E3;
   padding: 12px 25px;
   border-radius: 50px;
   cursor: pointer;
@@ -69,10 +70,12 @@ main {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4rem;
+  margin-top: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 70vh;
+  border: 2px solid red;
 }
 
 main .main-left h1 {
@@ -90,7 +93,7 @@ main .main-right {
   background-image: url(imgs/dark.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 110%;
   display: block;
   width: 700px;
   height: 500px;
@@ -193,6 +196,13 @@ footer .download-app {
 @media (prefers-color-scheme: light) {
   * {
     color: #0f0f0f;
+  }
+  header span {
+    color: #5935B4;
+  }
+  header a {
+    color: #5935B4;
+    border-color: #5935B4;
   }
   .download-app {
     background-image: url(imgs/blk.svg);
