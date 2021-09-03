@@ -33,19 +33,20 @@ html {
 
 body {
     background-color: $black;
-    font-family: BlinkMacSystemFont, -apple-system, sans-serif;
+    font-family: BlinkMacSystemFont, -apple-system, sans-serif, Helvetica, sans-serif;
 
 }
 header {
     @include block;
+    margin-top: 5vh;
     padding-top: 1.5vh;
     padding-bottom: 1.5vh;
     height: 5vh;
-    border: 2px solid green;
     display: flex;
     align-items: center;
     .logo {
         width: 80px;
+        height: 46px;
     }
     span {
         font-size: 2rem;
@@ -57,9 +58,8 @@ header {
         text-decoration: none;
         font-size: 1.25rem;
         margin-left: auto;
-        background-color: transparent;
-        color: $purple;
-        border: 2px solid $purple;
+        background-color: $purple;
+        color: $black;
         padding: 12px 25px;
         border-radius: 50px;
         cursor: pointer;
@@ -71,7 +71,6 @@ main {
     margin-top: 5vh;
     display: flex;
     height: 70vh;
-    border: 2px solid red;
     .main-left {
         h1 {
             font-size: 3rem;
@@ -87,10 +86,9 @@ main {
         background-image: url(imgs/dark.svg);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 110%;
+        background-size: contain;
         display: block;
-        width: 700px; //Nefungujen a large monitoru
-        height: 500px;
+        width: 100%; //Nefungujen a large monitoru
     }
     
 }
@@ -210,11 +208,10 @@ footer {
     }
     header { 
         span {
-            color: #5935B4;
+            color: $purple;
         }
         a {
-            color: #5935B4;
-            border-color: #5935B4;
+            color: $white;
         }
     }
     .download-app {
