@@ -1,40 +1,95 @@
-.download-app {
-  display: block;
-  width: 160px;
-  height: 55px;
-  background-image: url(imgs/w.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  margin-top: 3rem;
-  margin-left: 0;
-  margin-right: auto;
-  cursor: pointer;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Teko:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
-  color: #FAF7FF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  background-color: #0f0f0f;
-  font-family: BlinkMacSystemFont, -apple-system, sans-serif, Helvetica, sans-serif;
+  background: #efefef;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+section:nth-of-type(1) {
+  background: white;
+  position: relative;
+}
+
+section:nth-of-type(2) {
+  background: #efefef;
+  bottom: 0;
+}
+
+section:nth-of-type(3) {
+  margin-top: -80vh;
+}
+
+section:nth-of-type(4) {
+  margin-top: -50vh;
+  min-height: 20vh;
+  max-height: 20vh;
+}
+
+section img {
+  pointer-events: none;
+}
+
+section .popredi {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+section .baraky {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+section .hradek {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+button {
+  padding: 0.8rem 3rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #5935B4;
+  cursor: pointer;
+}
+
+button a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
 }
 
 header {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5vh;
-  padding-top: 1.5vh;
-  padding-bottom: 1.5vh;
-  height: 5vh;
+  width: 85%;
+  margin: 0 auto 0 auto;
+  padding: 1rem 0 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,172 +98,107 @@ header {
           align-items: center;
 }
 
-header .logo {
-  width: 80px;
-  height: 46px;
-}
-
-header span {
-  font-size: 2rem;
-  font-weight: bold;
+header div span {
   margin-left: 0.5rem;
-  color: #8D68E3;
+  display: block;
+  font-family: "Teko", sans-serif;
+  font-size: 3rem;
 }
 
-header a {
-  text-decoration: none;
-  font-size: 1.25rem;
-  margin-left: auto;
-  background-color: #8D68E3;
-  color: #0f0f0f;
-  padding: 12px 25px;
-  border-radius: 50px;
-  cursor: pointer;
+header button {
+  background-color: #7F64C3;
 }
 
 main {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 70vh;
+  z-index: 999;
+  position: absolute;
+  left: 7.5%;
 }
 
-main .main-left h1 {
-  font-size: 3rem;
-  white-space: nowrap;
+main h1 {
+  margin-top: 3rem;
+  font-size: 4rem;
+  font-family: "Teko", sans-serif;
 }
 
-main .main-left p {
-  margin-top: 1rem;
+main h1 a {
+  color: #5935B4;
+}
+
+main p {
+  font-family: "Open Sans", sans-serif;
   font-size: 1.25rem;
+  font-weight: 500;
 }
 
-main .main-right {
-  margin-left: auto;
-  background-image: url(imgs/dark.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  display: block;
-  width: 100%;
+main button {
+  margin-top: 3rem;
 }
 
 iframe {
   display: block;
-  margin-top: 10rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 25vh auto 0 auto;
   border-radius: 28px;
 }
 
-footer {
-  width: 80%;
+h2 {
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 4rem;
+  font-family: "Teko", sans-serif;
+}
+
+.download-buttons a {
+  display: block;
+  width: 160px;
+  height: 55px;
+  background-image: url(imgs/blk.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
+}
+
+.social-buttons {
+  width: 85%;
+  margin: 0 auto 0 auto;
+  width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 10rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-footer h2 {
-  font-size: 3rem;
-  text-align: center;
+.social-buttons a {
+  width: 55px;
+  height: 55px;
+  background: #ffffff;
+  background: linear-gradient(337deg, #ffffff 0%, #efefef 75%);
+  border-radius: 50px;
+  position: relative;
 }
 
-footer .download-app {
-  margin-left: auto !important;
-  margin-right: auto;
-  margin-bottom: 10rem;
+.social-buttons a img {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-@media (max-width: 575.98px) {
-  header .logo {
-    width: 70px;
-  }
-  header a {
-    display: none;
-  }
-  main .main-left h1 {
-    font-size: 1.75rem;
-    white-space: normal;
-  }
-  main .main-left p {
-    line-height: 1.75rem;
-  }
-  iframe {
-    margin-top: 7.5rem;
-  }
-  footer {
-    width: 90%;
-    margin-top: 7.5rem;
-    line-height: 2.5rem;
-  }
-  footer h2 {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 767.98px) {
-  header {
-    width: 90%;
-  }
-  main {
-    width: 90%;
-  }
-  main .main-left h1 {
-    font-size: 1.75rem;
-  }
-  main .main-left .download-app {
-    margin-top: 7rem;
-  }
-  iframe {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 991.98px) {
-  header {
-    width: 90%;
-  }
-  main {
-    width: 90%;
-  }
-  main .main-right {
-    display: none;
-  }
-  iframe {
-    width: 680px;
-    height: 382,50px;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  * {
-    color: #0f0f0f;
-  }
-  header span {
-    color: #8D68E3;
-  }
-  header a {
-    color: #FAF7FF;
-  }
-  .download-app {
-    background-image: url(imgs/blk.svg);
-  }
-  body {
-    background-color: #FAF7FF;
-  }
-  main .main-right {
-    background-image: url(imgs/light.svg);
-  }
+[data-scroll] {
+  -webkit-transition: -webkit-transform 3s;
+  transition: -webkit-transform 3s;
+  transition: transform 3s;
+  transition: transform 3s, -webkit-transform 3s;
 }
 /*# sourceMappingURL=styles.css.map */
